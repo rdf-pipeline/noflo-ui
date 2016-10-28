@@ -45,7 +45,7 @@ Promise.resolve(http.createServer(function(req, res){
 }).then(function(){
     process.exit(0);
 }).catch(function(error){
-    console.log(error);
+    console.error(error, error.stack);
     process.exit(1);
 });
 
