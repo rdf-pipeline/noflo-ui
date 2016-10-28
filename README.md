@@ -61,9 +61,10 @@ If you prefer, you can also start a watcher process that will do a rebuild whene
 
     $ grunt watch
 
-Serve the UI using a webserver, then open the URL it in a web browser. Example:
+Install the webserver globally using npm link, then serve the UI using a webserver using the noflo-ui command.
 
-    $ node src/noflo-ui-server.js --port 3005
+    $ npm link
+    $ noflo-ui --port 3005
 
 Where 3005 is the port you want the server to run. Once it is built and the server is running you can access the UI at `http://localhost:3005/index.html`
 
