@@ -137,7 +137,7 @@ module.exports = ->
             replacement: process.env.NOFLO_APP_NAME or process.env.NOFLO_APP_TITLE or 'NoFlo UI'
           ,
             pattern: /\$NOFLO_APP_TITLE/ig
-            replacement: process.env.NOFLO_APP_TITLE or 'NoFlo Development Environment'
+            replacement: process.env.NOFLO_APP_TITLE or 'RDF Pipeline Framework (NoFlo version)'
           ,
             pattern: /\$NOFLO_APP_LOADING/ig
             replacement: process.env.NOFLO_APP_LOADING or 'Preparing NoFlo UI...'
