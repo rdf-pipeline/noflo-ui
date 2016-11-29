@@ -32,7 +32,11 @@ Promise.resolve(http.createServer(function(req, res){
         res.statusCode = 302;
         res.setHeader('Location', program.page);
         res.end();
-    } else if (req.url.indexOf('/node/') !== 0) {
+    } else if (req.url.indexOf('/node/') === 0 && program.websocket) {
+        res.statusCode = 302;
+        res.setHeader('Location', program.websocket.replace(/\w+:\/\/([^\/]+)/, "http://$1" + req.url));
+        res.end();
+    } else {
         serve(req, res, done);
     }
 })).then(function(server){
